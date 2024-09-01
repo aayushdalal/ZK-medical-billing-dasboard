@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style2.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
- <h1>ZK MEDICALL BILLING PLATFORM</h1>
  
- <image id="photo" src ="./assetss/drew-hays-tGYrlchfObE-unsplash.jpg"></image>
-
- <form   method="GET" id="form">
+ <!-- <form action="./index.html" method="GET" id="form">
         
         <div>
             <label for="naam">Patient name:</label>
@@ -28,19 +25,152 @@
         <div>
             <button type="submit">login</button>
         </div>
-    </form>
+    </form> -->
+    <div class="container mt-5">
+        <div class="form">
+        <h2>Add Patient Information</h2>
+        <form action="./index.html" method="get" id="form">
+
+            <!-- Patient Personal Information -->
+            <h4>Patient Personal Information</h4>
+             <div class="individual-form">
+            <div class="form-group">
+                <label for="naam">Name</label>
+                <input type="text" class="form-control" id="naam" name="username" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="enter your mail" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" class="form-control" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select class="form-control" id="gender" name="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="contact_info">Contact Info</label>
+                <input type="text" class="form-control" id="contact_info" name="contact_info" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" class="form-control" id="address" name="address" required>
+            </div>
+        </div>
+
+            <!-- Medical History -->
+            <h4>Medical History</h4>
+            <div class="individual-form">
+            <div class="form-group">
+                <label for="past_conditions">Past Conditions</label>
+                <textarea class="form-control" id="past_conditions" name="past_conditions"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="family_history">Family History</label>
+                <textarea class="form-control" id="family_history" name="family_history"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="current_medications">Current Medications</label>
+                <textarea class="form-control" id="current_medications" name="current_medications"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="allergies">Allergies</label>
+                <textarea class="form-control" id="allergies" name="allergies"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="immunization_history">Immunization History</label>
+                <textarea class="form-control" id="immunization_history" name="immunization_history"></textarea>
+            </div>
+        </div>
+
+            <!-- Symptoms -->
+            <h4>Symptoms</h4>
+            <div class="individual-form">
+            <div class="form-group">
+                <label for="onset">Onset</label>
+                <input type="text" class="form-control" id="onset" name="onset">
+            </div>
+            <div class="form-group">
+                <label for="nature">Nature</label>
+                <input type="text" class="form-control" id="nature" name="nature">
+            </div>
+            <div class="form-group">
+                <label for="severity">Severity</label>
+                <input type="text" class="form-control" id="severity" name="severity">
+            </div>
+            <div class="form-group">
+                <label for="duration">Duration</label>
+                <input type="text" class="form-control" id="duration" name="duration">
+            </div>
+            <div class="form-group">
+                <label for="frequency">Frequency</label>
+                <input type="text" class="form-control" id="frequency" name="frequency">
+            </div>
+        </div>
+
+            <!-- Lifestyle -->
+            <h4>Lifestyle</h4>
+            <div class="individual-form">
+            <div class="form-group">
+                <label for="diet">Diet</label>
+                <textarea class="form-control" id="diet" name="diet"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="exercise">Exercise</label>
+                <textarea class="form-control" id="exercise" name="exercise"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="sleep_patterns">Sleep Patterns</label>
+                <textarea class="form-control" id="sleep_patterns" name="sleep_patterns"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="substance_use">Substance Use</label>
+                <textarea class="form-control" id="substance_use" name="substance_use"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="occupational_exposures">Occupational Exposures</label>
+                <textarea class="form-control" id="occupational_exposures" name="occupational_exposures"></textarea>
+            </div>
+        </div>
+
+
+            <!-- Lab Tests -->
+            <h4>Lab Tests</h4>
+            <div class="individual-form">
+            <div class="form-group">
+                <label for="test_type">Test Type</label>
+                <input type="text" class="form-control" id="test_type" name="test_type">
+            </div>
+            <div class="form-group">
+                <label for="test_results">Test Results</label>
+                <textarea class="form-control" id="test_results" name="test_results"></textarea>
+            </div>
+        </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
      const form=document.getElementById('form')
-     const naam=document.getElementById('naam')
+     const nam=document.getElementById('naam')
      const email=document.getElementById('email')
      const password=document.getElementById('psswd')
-     form.addEventListener('submit',function(e){
-        e.preventDefault();
-        const namevalue=naam.value;
+     form.addEventListener('submit',function(){
+        const namevalue=nam.value;
         const emailvalue=email.value;
         const passwordvalue=password.value;
         localStorage.setItem('nam-value',namevalue);
-        ocalStorage.setItem('email-value',emailvalue);
+        localStorage.setItem('email-value',emailvalue);
         window.location.href="index.html";
     })
     </script>
