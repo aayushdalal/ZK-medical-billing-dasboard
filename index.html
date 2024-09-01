@@ -3,154 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthcare Dashboard</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Document</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Healthcare Dashboard</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#aio" style="padding-right: 200px; color: blueviolet; font-size: 30px;">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a target="_blank" class="nav-link" href="./index2.html" style="padding-right: 200px; color: blueviolet; font-size: 30px;">Patients</a>
-                </li>
-            </ul>
+ 
+ <!-- <form action="./index.html" method="GET" id="form">
+        
+        <div>
+            <label for="naam">Patient name:</label>
+            <input type="text" name="username" id="naam" placeholder="enter your name">
         </div>
-    </nav>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="enter your mail">
+        </div>
+        <div>
+            <label for="psswd">Password:</label>
+            <input type="password" name="password" id="psswd"  placeholder="enter your password">
+        </div>
+        <div>
+            <button type="submit">login</button>
+        </div>
+    </form> -->
+    <div class="container mt-5">
+        <div class="form">
+        <h2>Add Patient Information</h2>
+        <form action="./index3.html" method="get" id="form">
 
-    <!-- Main Content -->
-    <div class="container-fluid mt-4" id="aio">
-        <div class="row">
-            <!-- Sidebar -->
-            <div class="col-md-2 bg-light sidebar">
-                <ul class="nav flex-column">
-                    <li class="nav-item" >
-                        <a class="nav-link active" href="#">Dashboard Overview</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Patient_Management">Patient Management</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Diagnostic_Results">Diagnostic Results</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Treatment_Plans">Treatment Plans</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Analytics">Analytics</a>
-                    </li>
-                </ul>
+            <!-- Patient Personal Information -->
+            <h4>Patient Personal Information</h4>
+             <div class="individual-form">
+            <div class="form-group">
+                <label for="naam">Name</label>
+                <input type="text" class="form-control" id="naam" name="username" required>
             </div>
-
-            <!-- Dashboard Content -->
-            <div class="col-md-10">
-                <!-- Patient Information -->
-                <div class="card mb-4">
-                    <div class="card-header" id="Patient_Management">
-                        <h4>Patient Information</h4>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h5><div id="naam">Name:</div></h5>
-                                <h5><div id="email">Email:</div></h5>
-                                <h6>Age: 45</h6>
-                                <h6>Gender: Male</h6>
-                            </div>
-                            <div class="col-md-6">
-                                <h6>Last Visit: August 15, 2024</h6>
-                                <h6>Next Appointment: September 10, 2024</h6>
-                                <h6>Status: Active</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Diagnostic Results -->
-                <div class="card mb-4">
-                    <div class="card-header" id="Diagnostic_Results">
-                        <h4>Diagnostic Results</h4>
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>Date</th>
-                                        <th>Test</th>
-                                        <th>Result</th>
-                                        <th>Normal Range</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>August 10, 2024</td>
-                                        <td>Blood Pressure</td>
-                                        <td>130/80 mmHg</td>
-                                        <td>120/80 mmHg</td>
-                                    </tr>
-                                    <tr>
-                                        <td>August 10, 2024</td>
-                                        <td>Cholesterol</td>
-                                        <td>200 mg/dL</td>
-                                        <td>200 mg/dL</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Treatment Plans -->
-                <div class="card mb-4">
-                    <div class="card-header" id="Treatment_Plans">
-                        <h4>Treatment Plans</h4>
-                    </div>
-                    <div class="card-body">
-                        <p>Current Treatment Plan: <strong>Hypertension Management</strong></p>
-                        <ul>
-                            <li>Medication: Lisinopril 10mg daily</li>
-                            <li>Diet: Low sodium diet</li>
-                            <li>Exercise: 30 minutes of moderate exercise daily</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Patient Progress Visualization -->
-                <div class="card">
-                    <div class="card-header" id="Analytics">
-                        <h4>Patient Progress</h4>
-                    </div>
-                    <div class="card-body">
-                        <div id="progressChart" style="height: 300px;"></div>
-                    </div>
-                </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="enter your mail" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" class="form-control" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select class="form-control" id="gender" name="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="contact_info">Contact Info</label>
+                <input type="text" class="form-control" id="contact_info" name="contact_info" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" class="form-control" id="address" name="address" required>
             </div>
         </div>
+
+            <!-- Medical History -->
+            <h4>Medical History</h4>
+            <div class="individual-form">
+            <div class="form-group">
+                <label for="past_conditions">Past Conditions</label>
+                <textarea class="form-control" id="past_conditions" name="past_conditions"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="family_history">Family History</label>
+                <textarea class="form-control" id="family_history" name="family_history"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="current_medications">Current Medications</label>
+                <textarea class="form-control" id="current_medications" name="current_medications"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="allergies">Allergies</label>
+                <textarea class="form-control" id="allergies" name="allergies"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="immunization_history">Immunization History</label>
+                <textarea class="form-control" id="immunization_history" name="immunization_history"></textarea>
+            </div>
+        </div>
+
+            <!-- Symptoms -->
+            <h4>Symptoms</h4>
+            <div class="individual-form">
+            <div class="form-group">
+                <label for="onset">Onset</label>
+                <input type="text" class="form-control" id="onset" name="onset">
+            </div>
+            <div class="form-group">
+                <label for="nature">Nature</label>
+                <input type="text" class="form-control" id="nature" name="nature">
+            </div>
+            <div class="form-group">
+                <label for="severity">Severity</label>
+                <input type="text" class="form-control" id="severity" name="severity">
+            </div>
+            <div class="form-group">
+                <label for="duration">Duration</label>
+                <input type="text" class="form-control" id="duration" name="duration">
+            </div>
+            <div class="form-group">
+                <label for="frequency">Frequency</label>
+                <input type="text" class="form-control" id="frequency" name="frequency">
+            </div>
+        </div>
+
+            <!-- Lifestyle -->
+            <h4>Lifestyle</h4>
+            <div class="individual-form">
+            <div class="form-group">
+                <label for="diet">Diet</label>
+                <textarea class="form-control" id="diet" name="diet"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="exercise">Exercise</label>
+                <textarea class="form-control" id="exercise" name="exercise"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="sleep_patterns">Sleep Patterns</label>
+                <textarea class="form-control" id="sleep_patterns" name="sleep_patterns"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="substance_use">Substance Use</label>
+                <textarea class="form-control" id="substance_use" name="substance_use"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="occupational_exposures">Occupational Exposures</label>
+                <textarea class="form-control" id="occupational_exposures" name="occupational_exposures"></textarea>
+            </div>
+        </div>
+
+
+            <!-- Lab Tests -->
+            <h4>Lab Tests</h4>
+            <div class="individual-form">
+            <div class="form-group">
+                <label for="test_type">Test Type</label>
+                <input type="text" class="form-control" id="test_type" name="test_type">
+            </div>
+            <div class="form-group">
+                <label for="test_results">Test Results</label>
+                <textarea class="form-control" id="test_results" name="test_results"></textarea>
+            </div>
+        </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </div>
-
-    <!-- Scripts -->
+    </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- <script src="./app.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-    const naam2= localStorage.getItem('nam-value');
-    
-    const email= localStorage.getItem('email-value');
-    document.getElementById('naam').textContent= naam2;
-    document.getElementById('email').textContent=email;
-
+     const form=document.getElementById('form')
+     const nam=document.getElementById('naam')
+     const email=document.getElementById('email')
+     const password=document.getElementById('psswd')
+     form.addEventListener('submit',function(){
+        const namevalue=nam.value;
+        const emailvalue=email.value;
+        const passwordvalue=password.value;
+        localStorage.setItem('nam-value',namevalue);
+        localStorage.setItem('email-value',emailvalue);
+        window.location.href="index3.html";
+    })
     </script>
 </body>
 </html>
