@@ -18,31 +18,22 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="#aio" style="padding-right: 200px; color: blueviolet; font-size: 30px;">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Patients</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Diagnostics</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Treatment Plans</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Reports</a>
+                    <a target="_blank" class="nav-link" href="./index2.html" style="padding-right: 200px; color: blueviolet; font-size: 30px;">Patients</a>
                 </li>
             </ul>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <div class="container-fluid mt-4">
+    <div class="container-fluid mt-4" id="aio">
         <div class="row">
             <!-- Sidebar -->
             <div class="col-md-2 bg-light sidebar">
                 <ul class="nav flex-column">
-                    <li class="nav-item">
+                    <li class="nav-item" >
                         <a class="nav-link active" href="#">Dashboard Overview</a>
                     </li>
                     <li class="nav-item">
@@ -70,7 +61,8 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6">
-                                <h5>Name: rohan</h5>
+                                <h5><div id="na">Name:</div></h5>
+                                <h5><div id="em">Email:</div></h5>
                                 <h6>Age: 45</h6>
                                 <h6>Gender: Male</h6>
                             </div>
@@ -151,6 +143,15 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="./app.js"></script>
+    <!-- <script src="./app.js"></script> -->
+    <script>
+    const naam= localStorage.getItem('name-value');
+
+    
+    const email= localStorage.getItem('email-value');
+    document.getElementById('naam').textContent=naam;
+    document.getElementById('email').textContent=email;
+
+    </script>
 </body>
 </html>

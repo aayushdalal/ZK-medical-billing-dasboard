@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style2.css">
+</head>
+<body>
+ <h1>ZK MEDICALL BILLING PLATFORM</h1>
+ 
+ <image id="photo" src ="./assetss/drew-hays-tGYrlchfObE-unsplash.jpg"></image>
+
+ <form   method="GET" id="form">
+        
+        <div>
+            <label for="naam">Patient name:</label>
+            <input type="text" name="username" id="naam" placeholder="enter your name">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="enter your mail">
+        </div>
+        <div>
+            <label for="psswd">Password:</label>
+            <input type="password" name="password" id="psswd"  placeholder="enter your password">
+        </div>
+        <div>
+            <button type="submit">login</button>
+        </div>
+    </form>
+    <script>
+     const form=document.getElementById('form')
+     const naam=document.getElementById('naam')
+     const email=document.getElementById('email')
+     const password=document.getElementById('psswd')
+     form.addEventListener('submit',function(e){
+        e.preventDefault();
+        const namevalue=naam.value;
+        const emailvalue=email.value;
+        const passwordvalue=password.value;
+        localStorage.setItem('nam-value',namevalue);
+        ocalStorage.setItem('email-value',emailvalue);
+        window.location.href="index.html";
+    })
+    </script>
+</body>
+</html>
