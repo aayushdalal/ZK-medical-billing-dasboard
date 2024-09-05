@@ -42,13 +42,17 @@
                 <label for="email">Email:</label>
                 <input type="email" name="email" id="email" placeholder="enter your mail" required>
             </div>
+            <div>
+                <label for="psswd">Password:</label>
+                <input type="password" name="password" id="psswd"  placeholder="enter your password">
+            </div>
             <div class="form-group">
                 <label for="age">Age</label>
-                <input type="number" class="form-control" id="age" name="age" required>
+                <input type="number" class="form-control" id="age" name="age">
             </div>
             <div class="form-group">
                 <label for="gender">Gender</label>
-                <select class="form-control" id="gender" name="gender" required>
+                <select class="form-control" id="gender" name="gender" >
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                     <option value="Other">Other</option>
@@ -56,11 +60,11 @@
             </div>
             <div class="form-group">
                 <label for="contact_info">Contact Info</label>
-                <input type="text" class="form-control" id="contact_info" name="contact_info" required>
+                <input type="text" class="form-control" id="contact_info" name="contact_info" >
             </div>
             <div class="form-group">
                 <label for="address">Address</label>
-                <input type="text" class="form-control" id="address" name="address" required>
+                <input type="text" class="form-control" id="address" name="address" >
             </div>
         </div>
 
@@ -161,18 +165,41 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-     const form=document.getElementById('form')
-     const nam=document.getElementById('naam')
-     const email=document.getElementById('email')
-     const password=document.getElementById('psswd')
-     form.addEventListener('submit',function(){
-        const namevalue=nam.value;
-        const emailvalue=email.value;
-        const passwordvalue=password.value;
-        localStorage.setItem('nam-value',namevalue);
-        localStorage.setItem('email-value',emailvalue);
-        window.location.href="index3.html";
-    })
+        const form = document.getElementById('form');
+        const naam = document.getElementById('naam');
+        const email = document.getElementById('email');
+        const passwd = document.getElementById('psswd');
+        const age = document.getElementById('age');
+        const gender = document.getElementById('gender');
+        const contact_info = document.getElementById('contact_info');
+        const address = document.getElementById('address');
+        
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();  // Prevent the form from reloading the page
+            
+            // Collect form data
+            const nameValue = naam.value;
+            const emailValue = email.value;
+            const passwdValue = passwd.value;
+            const ageValue = age.value;
+            const genderValue = gender.value;
+            const contactValue = contact_info.value;
+            const addressValue = address.value;
+            
+            // Store form data in localStorage
+            localStorage.setItem('name', nameValue);
+            localStorage.setItem('email', emailValue);
+            localStorage.setItem('password', passwdValue);
+            localStorage.setItem('age', ageValue);
+            localStorage.setItem('gender', genderValue);
+            localStorage.setItem('contact_info', contactValue);
+            localStorage.setItem('address', addressValue);
+            
+            // Redirect to the next page
+            window.location.href = "index3.html";
+        });
     </script>
+    
+    
 </body>
 </html>
